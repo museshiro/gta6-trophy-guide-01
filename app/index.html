@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Tracker — GTA VI Trophy Guide</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5</p>
+    <h1>Leonida Trophy Tracker</h1>
+    <p class="tagline">Every one of the 55 trophies, with a guide, a source and a checklist. No account, no network — your progress lives in this browser.</p>
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="progress-text" id="progressText">0 / 55 earned</p>
+    </div>
+    <div class="grade-counts" id="gradeCounts"></div>
+  </div>
+</header>
+
+<main>
+  <section class="toolbar" aria-label="Tracker controls">
+    <input type="search" id="searchBox" placeholder="Search a trophy or guide…" aria-label="Search trophies">
+    <div class="filters" id="filterChips" role="group" aria-label="Filter by kind">
+      <button data-filter="all" class="chip active">All 55</button>
+      <button data-filter="story" class="chip">Story</button>
+      <button data-filter="missable" class="chip">Missable</button>
+      <button data-filter="collectible" class="chip">Collectibles</button>
+      <button data-filter="activity" class="chip">Activities</button>
+      <button data-filter="online" class="chip">Online</button>
+      <button data-filter="earned" class="chip">Earned</button>
+      <button data-filter="todo" class="chip">Not earned</button>
+    </div>
+    <label class="spoiler-toggle">
+      <input type="checkbox" id="spoilerToggle">
+      <span>Hide story spoilers (names &amp; descriptions stay hidden until earned)</span>
+    </label>
+    <div class="actions">
+      <button id="exportBtn" class="btn">Export progress</button>
+      <button id="importBtn" class="btn">Import progress</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+      <button id="resetBtn" class="btn danger">Reset</button>
+    </div>
+  </section>
+
+  <section aria-label="Trophy checklist">
+    <div class="list-head">
+      <h2 id="listTitle">Checklist</h2>
+      <p class="list-count" id="listCount"></p>
+    </div>
+    <p class="empty" id="emptyMsg" hidden>No trophies match this filter.</p>
+    <ul class="trophy-list" id="trophyList"></ul>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the Platinum</h2>
+    <p class="roadmap-intro">One playthrough is enough, and there is only one trophy the guides flag as possibly missable. Play the story first, then work the stages in order. Cheats disable trophies — leave them off for the whole run.</p>
+    <ol class="stages" id="stageList"></ol>
+  </section>
+
+  <section class="notes" aria-label="About this guide">
+    <h2>About this guide</h2>
+    <p>Names, descriptions and grades are the official PlayStation list (55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze; 28 hidden). Every guide is written for this entry in its own words, and each one names its sources beside it — a cited guide beats an uncited one, however detailed. Sources used across the guide: Push Square, PowerPyx, Planet GTA 6, KeenGamer, eGamers, GTA Spotter, GTABase, PSNProfiles and Exophase.</p>
+    <p>Your checklist is saved in this browser (localStorage) and never leaves it. Export downloads a JSON file you can keep or import back on another machine. This guide is unofficial and not affiliated with Rockstar Games; it shows no Rockstar logo, artwork or game screenshots.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Tracker — an offline guide for GTA VI on PS5. Built for the make.fun trophy guide bounty.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
